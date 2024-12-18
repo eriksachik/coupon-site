@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Coupon Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsiveness -->
+    <style>
+        body {
+            font-family: "Times New Roman", Times, serif; /* Changed font to Times New Roman */
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+            transition: background-color 0.5s; /* Smooth transition for background color change */
+            font-size: 20px; /* Increased font size slightly */
+            background-color: #FF8DA1; /* Set initial background color to the specified pink */
+            max-width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 1.8em;
+        }
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 20px;
+            text-decoration: none;
+            font-size: 18px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            max-width: 90%;
+        }
+        .button:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+        .footer {
+            margin-top: 50px;
+            font-size: 18px; /* Footer font size */
+        }
+        .cat-gif {
+            margin: 10px auto;
+            display: block;
+            width: 80px; /* Reduced width for an even smaller GIF */
+            height: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            margin: 20px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Kaila's Coupon</h1>
+    <img src="https://media.tenor.com/q94A39eD2N8AAAAM/taylor-swift-cat.gif" alt="Cute Cat" class="cat-gif">
+    <img src="https://storage.googleapis.com/loveable.appspot.com/blog/uploads/2024/07/30095011/use-projector.jpg" alt="Coupon Image" style="width:300px;height:auto;">
+    <p>This coupon gives you <strong>1 night watch anything of your choice, could even be a Taylor Swift documentary</strong>!</p>
+    <button class="button" onclick="useCoupon()" id="couponButton">Use Coupon</button>
+
+    <div class="footer">
+        From Erik ❤️
+    </div>
+
+    <script>
+        function useCoupon() {
+            const button = document.getElementById('couponButton');
+            button.innerText = "Coupon Used";
+            button.disabled = true;
+            document.body.style.backgroundColor = "green"; // Change the background color to green
+            alert("Coupon redeemed successfully!");
+        }
+    </script>
+</body>
+</html>
