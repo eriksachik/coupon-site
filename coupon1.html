@@ -2,14 +2,22 @@
 <html>
 <head>
     <title>Coupon Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- Added for responsiveness -->
     <style>
         body {
             font-family: "Times New Roman", Times, serif; /* Changed font to Times New Roman */
             text-align: center;
-            margin: 50px;
+            margin: 0;
+            padding: 20px;
             transition: background-color 0.5s; /* Smooth transition for background color change */
             font-size: 20px; /* Increased font size slightly */
             background-color: #FF8DA1; /* Set initial background color to the specified pink */
+            max-width: 100%;
+            overflow-x: hidden;
+            box-sizing: border-box;
+        }
+        h1 {
+            font-size: 1.8em;
         }
         .button {
             background-color: #4CAF50;
@@ -20,6 +28,7 @@
             border: none;
             border-radius: 5px;
             cursor: pointer;
+            max-width: 90%;
         }
         .button:disabled {
             background-color: #ccc;
@@ -32,8 +41,15 @@
         .cat-gif {
             margin: 10px auto;
             display: block;
-            width: 100px; /* Reduced width for an even smaller GIF */
+            width: 80px; /* Reduced width for an even smaller GIF */
             height: auto;
+        }
+        img {
+            max-width: 100%;
+            height: auto;
+        }
+        p {
+            margin: 20px 0;
         }
     </style>
 </head>
