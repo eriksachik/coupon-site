@@ -71,7 +71,13 @@
             button.disabled = true;
             document.body.style.backgroundColor = "green"; // Change the background color to green
             alert("Coupon redeemed successfully!");
+            // Trigger mailto link
+            const subject = encodeURIComponent("Coupon Redeemed");
+            const body = encodeURIComponent("Kaila has redeemed her Sima Sushi Date coupon!");
+            const email = "eriksachik@gmail.com"; // Replace with your email address
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
         }
+        
     </script>
 </body>
 </html>
