@@ -64,12 +64,19 @@
         From Erik ❤️
     </div>
 
+    <audio id="redeemSound" src="https://www.soundjay.com/button/sounds/button-3.mp3"></audio>
+
+
     <script>
         function useCoupon() {
             const button = document.getElementById('couponButton');
+            const sound = document.getElementById('redeemSound');
+
             button.innerText = "Coupon Used";
             button.disabled = true;
             document.body.style.backgroundColor = "green"; // Change the background color to green
+            sound.play();
+
             alert("Coupon redeemed successfully!");
             // Trigger mailto link
             const subject = encodeURIComponent("Coupon Redeemed");
