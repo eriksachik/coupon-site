@@ -71,6 +71,10 @@
             button.disabled = true;
             document.body.style.backgroundColor = "green"; // Change the background color to green
             alert("Coupon redeemed successfully!");
+            const subject = encodeURIComponent("Coupon Redeemed");
+            const body = encodeURIComponent("Kaila has redeemed her Massage coupon!");
+            const email = "eriksachik@gmail.com"; // Replace with your email address
+            window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
         }
     </script>
 </body>
